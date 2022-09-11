@@ -1,0 +1,10 @@
+<h1>Todos los articulos</h1>
+
+<p><%= link_to "wikinimus", articles_path %></p>
+<p><%= link_to "New article", new_article_path %></p>
+
+
+<% @articles.each do |article| %>
+  <h2><%= link_to article.title, article_path(article) %></h2>
+  <p> <%= article.content %> </p>
+<% end %>
